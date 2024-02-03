@@ -19,8 +19,10 @@ PLANETS = (('Mercury', 57),
            ('Venus', 108),
            ('Earth', 150),
            ('Mars', 228),
-           ('Jupiter', 779)
+           ('Jupiter', 779),
            ('Saturn', 1430),
-           ('Uranus', 2880)
+           ('Uranus', 2880),
            ('Neptune', 4500)
 )
+
+print(PLANETS)
