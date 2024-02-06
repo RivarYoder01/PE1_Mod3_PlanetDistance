@@ -65,6 +65,7 @@ def display_abs_distance(planet1_num, planet2_num):
 
     print (planet1_name, "and", planet2_name, "are", dist_between, "million miles apart!")
 
+
 def display_planets_menu():
     print('=' * MAX_LINE)
     print("Planet's Average Distance From Sun")
@@ -78,5 +79,35 @@ def display_planets_menu():
     print('=' * MAX_LINE)
 
 
-display_planets_menu()
+def main():
+    display_planets_menu()
+
+    while True:
+        planet1_num = get_integer_input("Please enter the 1st Planet #", min_num=0, max_num=len(PLANETS))
+
+        if planet1_num  == 0:
+            break
+
+        while True:
+            planet2_num = get_integer_input("Please enter the 2nd Planet #", min_num=0, max_num=len(PLANETS))
+
+            if planet1_num  == planet2_num:
+                print("Invalid Input: The same planet was entered twice")
+            else:
+                break
+
+            if planet2_num  == 0:
+                break
+
+            display_abs_distance(planet1_num, planet2_num)
+
+            input("Press enter to continue...")
+            print('=' * MAX_LINE)
+            print("Live Long and Prosper V")
+            print('=' * MAX_LINE)
+
+
+if __name__ == "__main__":
+    main()
+
 
