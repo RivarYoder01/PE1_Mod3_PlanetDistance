@@ -25,36 +25,36 @@ PLANETS = (('Mercury', 57),
            ('Neptune', 4500)
 )
 
-def get_integer_input(message, mun_num=0, max_num=0):
-"""
-Get a valid integer value from the user
----
-:param message: user's input
-:param min_num: min integer input value allowed
-:param max_num: max integer input value allowed
-:return user_input
-"""
+def get_integer_input(message, min_num, max_num):
+    """
+    Get a valid integer value from the user
+    ---
+    :param message: user's input
+    :param min_num: min integer input value allowed
+    :param max_num: max integer input value allowed
+    :return user_input
+    """
 
-while True:
-    try:
-        user_input = int(input(message))
+    while True:
+        try:
+            user_input = int(input(message))
 
-        if min == 0 and max == 0:
-            return user_input
-        elif min_num <= user_input <= max_num:
-            return user_input
-        else:
-            print(f"\tInvalid Input: Please enter a number between {min_num} and {max_num}.")
+            if min == 0 and max == 0:
+                return user_input
+            elif min_num <= user_input <= max_num:
+                return user_input
+            else:
+                print(f"\tInvalid Input: Please enter a number between {min_num} and {max_num}.")
+                continue
+
+        except ValueError:
+            print("\tInvalid Input: Please enter a number.")
             continue
 
-    except ValueError:
-        print("\tInvalid Input: Please enter a number.")
-        continue
-
 def display_abs_distance(planet1_num, planet2_num):
-"""
-
-"""
+    """
+    ---
+    """
     planet1_info = PLANETS[planet1_num - 1]
     planet1_name, planet1_dist = planet1_info
 
@@ -80,23 +80,27 @@ def display_planets_menu():
 
 
 def main():
+    """
+    ---
+    :return:
+    """
     display_planets_menu()
 
     while True:
         planet1_num = get_integer_input("Please enter the 1st Planet #", min_num=0, max_num=len(PLANETS))
 
-        if planet1_num  == 0:
+        if planet1_num == 0:
             break
 
         while True:
             planet2_num = get_integer_input("Please enter the 2nd Planet #", min_num=0, max_num=len(PLANETS))
 
-            if planet1_num  == planet2_num:
+            if planet1_num == planet2_num:
                 print("Invalid Input: The same planet was entered twice")
             else:
                 break
 
-            if planet2_num  == 0:
+            if planet2_num == 0:
                 break
 
             display_abs_distance(planet1_num, planet2_num)
