@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29396ee1-7251-4754-8f8c-1461000315af" name="Changes" comment="Made opening docstring, meta data for one author (Myself), and wrote the tuplet for the planets">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="29396ee1-7251-4754-8f8c-1461000315af" name="Changes" comment="Added commas that were missed before, adden temporary print to ensure tuple was stored correctly" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,12 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706924379738</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added commas that were missed before, adden temporary print to ensure tuple was stored correctly">
+      <option name="closed" value="true" />
+      <created>1706924577228</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706924577228</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made opening docstring, meta data for one author (Myself), and wrote the tuplet for the planets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made opening docstring, meta data for one author (Myself), and wrote the tuplet for the planets" />
+    <MESSAGE value="Added commas that were missed before, adden temporary print to ensure tuple was stored correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added commas that were missed before, adden temporary print to ensure tuple was stored correctly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
