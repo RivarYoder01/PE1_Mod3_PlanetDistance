@@ -25,6 +25,45 @@ PLANETS = (('Mercury', 57),
            ('Neptune', 4500)
 )
 
+def get_integer_input(message, mun_num=0, max_num=0):
+"""
+Get a valid integer value from the user
+---
+:param message: user's input
+:param min_num: min integer input value allowed
+:param max_num: max integer input value allowed
+:return user_input
+"""
+
+while True:
+    try:
+        user_input = int(input(message))
+
+        if min == 0 and max == 0:
+            return user_input
+        elif min_num <= user_input <= max_num:
+            return user_input
+        else:
+            print(f"\tInvalid Input: Please enter a number between {min_num} and {max_num}.")
+            continue
+
+    except ValueError:
+        print("\tInvalid Input: Please enter a number.")
+        continue
+
+def display_abs_distance(planet1_num, planet2_num):
+"""
+
+"""
+    planet1_info = PLANETS[planet1_num - 1]
+    planet1_name, planet1_dist = planet1_info
+
+    planet2_info = PLANETS[planet2_num - 1]
+    planet2_name, planet2_dist = planet2_info
+
+    dist_between = abs(planet1_dist - planet2_dist)
+
+    print (planet1_name, "and", planet2_name, "are", dist_between, "million miles apart!")
 
 def display_planets_menu():
     print('=' * MAX_LINE)
