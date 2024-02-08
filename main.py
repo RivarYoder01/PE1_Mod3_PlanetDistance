@@ -54,7 +54,9 @@ def get_integer_input(message, min_num, max_num):
 
 def display_abs_distance(planet1_num, planet2_num):
     """
-    ---
+    Takes in the users two planets numbers and unpacks the tuple. The function then subtracts the
+    two numbers from each other using the absolute function. It then displays a message with the
+    total distance
     """
     planet1_info = PLANETS[planet1_num - 1]
     planet1_name, planet1_dist = planet1_info
