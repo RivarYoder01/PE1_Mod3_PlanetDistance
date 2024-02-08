@@ -22,8 +22,8 @@ PLANETS = (('Mercury', 57),
            ('Jupiter', 779),
            ('Saturn', 1430),
            ('Uranus', 2880),
-           ('Neptune', 4500)
-)
+           ('Neptune', 4500))
+
 
 def get_integer_input(message, min_num, max_num):
     """
@@ -51,6 +51,7 @@ def get_integer_input(message, min_num, max_num):
             print("\tInvalid Input: Please enter a number.")
             continue
 
+
 def display_abs_distance(planet1_num, planet2_num):
     """
     ---
@@ -63,10 +64,13 @@ def display_abs_distance(planet1_num, planet2_num):
 
     dist_between = abs(planet1_dist - planet2_dist)
 
-    print (planet1_name, "and", planet2_name, "are", dist_between, "million miles apart!")
+    print(planet1_name, "and", planet2_name, "are", dist_between, "million miles apart!")
 
 
 def display_planets_menu():
+    """
+    Displays the planets menu and how far away from the sun they are.
+    """
     print('=' * MAX_LINE)
     print("Planet's Average Distance From Sun")
     print('=' * MAX_LINE)
@@ -81,8 +85,9 @@ def display_planets_menu():
 
 def main():
     """
-    ---
-    :return:
+    First displays the planets menu then asks for two planets then calls display_abs_distance to display how far
+    the two planets are from each other. At the end has enter to continue and displays the message live long and
+    prosper V.
     """
     display_planets_menu()
 
@@ -103,15 +108,13 @@ def main():
             if planet2_num == 0:
                 break
 
-            display_abs_distance(planet1_num, planet2_num)
+        display_abs_distance(planet1_num, planet2_num)
 
-            input("Press enter to continue...")
-            print('=' * MAX_LINE)
-            print("Live Long and Prosper V")
-            print('=' * MAX_LINE)
+        input("Press enter to continue...")
+        print('=' * MAX_LINE)
+        print("Live Long and Prosper V")
+        print('=' * MAX_LINE)
 
 
 if __name__ == "__main__":
     main()
-
-
