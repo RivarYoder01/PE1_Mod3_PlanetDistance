@@ -73,10 +73,12 @@ def display_planets_menu():
     """
     Displays the planets menu and how far away from the sun they are.
     """
+    # Displays header for the program
     print('=' * MAX_LINE)
     print("Planet's Average Distance From Sun")
     print('=' * MAX_LINE)
 
+    # Displays each planet with their name and distance from the sun and assigns it a menu number
     menu_number = 1
     for planet_name, planet_distance in PLANETS:
         print(f"#{menu_number} {planet_name:<7} = {planet_distance:>4} million miles")
@@ -88,30 +90,36 @@ def display_planets_menu():
 def main():
     """
     First displays the planets menu then asks for two planets then calls display_abs_distance to display how far
-    the two planets are from each other. At the end has enter to continue and displays the message live long and
-    prosper V.
+    the two planets are from each other. At the end displays the message live long and prosper V.
     """
     display_planets_menu()
 
+    # Gets the first planet menu input number
     while True:
         planet1_num = get_integer_input("Please enter the 1st Planet #", min_num=0, max_num=len(PLANETS))
 
+        # Have 0 end the program
         if planet1_num == 0:
             break
 
+        # Gets the second planet menu input number
         while True:
             planet2_num = get_integer_input("Please enter the 2nd Planet #", min_num=0, max_num=len(PLANETS))
 
+            # Error handling if the planet numbers are the same
             if planet1_num == planet2_num:
                 print("Invalid Input: The same planet was entered twice")
             else:
                 break
 
-            if planet2_num == 0:
-                break
+        # Have 0 end the program
+        if planet2_num == 0:
+            break
 
+        # Calls this function to display distance between the two planets
         display_abs_distance(planet1_num, planet2_num)
 
+        # Closing message before the program loops through again
         input("Press enter to continue...")
         print('=' * MAX_LINE)
         print("Live Long and Prosper V")
