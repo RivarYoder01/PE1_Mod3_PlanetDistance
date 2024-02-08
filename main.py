@@ -7,12 +7,13 @@ User inputs two different planets to calculate the distance between them.
 GitHub: https://github.com/caleb-jenkinson15/Planet_Distances
 """
 
-# metadata (RY- Currently written as in set up video, will be altered to include second programmer)
+# metadata
 __author__ = 'Rivar Yoder, Caleb Jenkinson'
 __date__ = '2023/07/02'
 __email__ = 'alyode01@wsc.edu, cajenk01@wsc.edu'
 __version__ = '0.0.1'
 
+# Maximum width for the display menu
 MAX_LINE = 60
 
 PLANETS = (('Mercury', 57),
@@ -35,6 +36,7 @@ def get_integer_input(message, min_num, max_num):
     :return user_input
     """
 
+# User puts in a number 0-8, the while loop runs until the user puts in a valid number
     while True:
         try:
             user_input = int(input(message))
@@ -43,12 +45,13 @@ def get_integer_input(message, min_num, max_num):
                 return user_input
             elif min_num <= user_input <= max_num:
                 return user_input
+            # Error shows if user puts in a number outside 0-8
             else:
                 print(f"\tInvalid Input: Please enter a number between {min_num} and {max_num}.")
                 continue
 
         except ValueError:
-            print("\tInvalid Input: Please enter a number.")
+            print("\tInvalid Input: Please enter a number.")  # Error shows if user enters non-number data
             continue
 
 
@@ -58,12 +61,13 @@ def display_abs_distance(planet1_num, planet2_num):
     two numbers from each other using the absolute function. It then displays a message with the
     total distance
     """
-    planet1_info = PLANETS[planet1_num - 1]
+    planet1_info = PLANETS[planet1_num - 1]  # Unpacking Planet1 Tuple
     planet1_name, planet1_dist = planet1_info
 
-    planet2_info = PLANETS[planet2_num - 1]
+    planet2_info = PLANETS[planet2_num - 1]  # Unpacking Planet2 Tuple
     planet2_name, planet2_dist = planet2_info
 
+    # Gives absolute value of planet1_dist - planet2_dist to avoid negatives
     dist_between = abs(planet1_dist - planet2_dist)
 
     print(planet1_name, "and", planet2_name, "are", dist_between, "million miles apart!")
