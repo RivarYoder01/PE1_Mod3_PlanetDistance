@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29396ee1-7251-4754-8f8c-1461000315af" name="Changes" comment="wrote docstring for display_abs_distance">
+    <list default="true" id="29396ee1-7251-4754-8f8c-1461000315af" name="Changes" comment="documentation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707407570622</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="documentation">
+      <option name="closed" value="true" />
+      <created>1707409560856</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707409560856</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,7 +133,8 @@
     <MESSAGE value="Added commas that were missed before, adden temporary print to ensure tuple was stored correctly" />
     <MESSAGE value="Added the main function" />
     <MESSAGE value="Some troubleshooting warnings and added some docstring to main and display planets menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some troubleshooting warnings and added some docstring to main and display planets menu" />
+    <MESSAGE value="documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,7 +2,9 @@
 
 """
 Usage: Planet_Distances.py
-User inputs two different planets to calculate the distance between them.
+User inputs two different planets to calculate the distance between them. The numbers put in correspond to the planets
+display menu made through a tuple. The two numbers input will be absolutely subtracted from each-other and displayed to
+the user after being unpacked. A while loop keeps the program in cycle until the user enters 0.
 
 GitHub: https://github.com/caleb-jenkinson15/Planet_Distances
 """
@@ -39,14 +41,13 @@ def get_integer_input(message, min_num, max_num):
 # User puts in a number 0-8, the while loop runs until the user puts in a valid number
     while True:
         try:
-            user_input = int(input(message))
+            user_input = int(input(message))  # User inputs a number from the planet menu
 
-            if min == 0 and max == 0:
+            if min == 0 and max == 0:  # Checks user_input for 0
                 return user_input
-            elif min_num <= user_input <= max_num:
+            elif min_num <= user_input <= max_num:  # Ensures user_input is within 0-8
                 return user_input
-            # Error shows if user puts in a number outside 0-8
-            else:
+            else:  # Error shows if user puts in a number outside 0-8
                 print(f"\tInvalid Input: Please enter a number between {min_num} and {max_num}.")
                 continue
 
