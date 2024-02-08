@@ -6,8 +6,12 @@
 ### [Planet information](https://www.universetoday.com/15462/how-far-are-the-planets-from-the-sun/) for project, average distance used.
 
 **What was Learned**
-* Item 1
-* Item 2
-* Item 3
-* Item 4
-* Item 5
+* While and for loops
+* Nested while loops
+* Docstrings for every function
+* Metadata and version declairation at the beginning of the program
+* Error handeling for out of range numbers and not numeric variables
+* Keeping consistant variables
+* Tuples that require unpacking
+* Absolute functions
+* Tab based error handling 
